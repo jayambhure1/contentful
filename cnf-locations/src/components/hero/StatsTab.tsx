@@ -13,8 +13,8 @@ export const StatsTab = () => {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
 
   const cardWrapperStyle = {
-    flex: "1 1 calc(20 % - 20px)",
-    minWidth: "160px",
+    flex: "1 1 calc(33.333% - 24px)",
+    minWidth: "220px",
   };
 
   const baseCardStyle = {
@@ -24,12 +24,12 @@ export const StatsTab = () => {
     justifyContent: "flex-start",
     alignItems: "flex-start",
     gap: "16px",
-    padding: "24px",
-    borderRadius: "16px",
-    background: "linear-gradient(135deg, #ffffff 0%, #fafbfc 100%)",
-    boxShadow: "0 2px 8px rgba(0, 0, 0, 0.08), 0 0 1px rgba(0, 0, 0, 0.04)",
-    border: "1px solid rgba(0,0,0,0.06)",
-    transition: "all 0.3s cubic-bezier(0.4,0,0.2,1)",
+    padding: "24px 22px",
+    borderRadius: "18px",
+    background: "linear-gradient(135deg, #ffffff 0%, #f7f9fb 100%)",
+    boxShadow: "0 10px 30px rgba(15, 23, 42, 0.08)",
+    border: "1px solid rgba(15, 23, 42, 0.08)",
+    transition: "transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease",
     cursor: "pointer",
     position: "relative" as const,
     overflow: "hidden",
@@ -38,24 +38,24 @@ export const StatsTab = () => {
   const getCardstyle = (isHovered: boolean) => ({
     ...baseCardStyle,
     ...(isHovered && {
-      boxShadow: "0 16px 32px rgba(0,0,0,0.15), 0 6px 12px rgba(0,0,0,0.08)",
-      transform:"translateY(-8px) scale(1.02)",
-      border:"1px solid rgba(0,0,0,0.1)",
-      backgroud: "linear-gradient(135deg,#ffffff 0%, #f8fbff 100%)",
+      boxShadow: "0 20px 40px rgba(15, 23, 42, 0.14)",
+      transform: "translateY(-6px)",
+      border: "1px solid rgba(15, 23, 42, 0.12)",
+      background: "linear-gradient(135deg, #ffffff 0%, #eef4ff 100%)",
     }),
   });
 
   const iconContainerStyle = {
     display: "flex",
-    alignItems:"center",
+    alignItems: "center",
     gap: "16px",
-    width: "100%"
+    width: "100%",
   };
 
   const textBlockStyle = {
     display: "flex",
     flexDirection: "column" as const,
-    gap: "6px"
+    gap: "6px",
   };
 
   const getIconStyle = (color: string, bgColor: string) => {
@@ -64,28 +64,29 @@ export const StatsTab = () => {
       height: "60px",
       display: "flex",
       alignItems: "center",
-      justifyContent:"center",
-      borderRedius: "10px",
+      justifyContent: "center",
+      borderRadius: "14px",
       background: bgColor,
-      color: color,
-      flexShrink:0
+      color,
+      flexShrink: 0,
+      boxShadow: "0 8px 16px rgba(15, 23, 42, 0.08)",
     };
   };
   const valueStyle = {
     fontSize: "32px",
     fontWeight: 800,
-    margin:0,
+    margin: 0,
     color: "#0a0e27",
-    lineHeight:"1",
-    letterSpacing: "-0.5px"
+    lineHeight: "1",
+    letterSpacing: "-0.5px",
   };
 
   const titleStyle = {
-    fontSize : "13px",
+    fontSize: "13px",
     fontWeight: 600,
-    mergin: 0,
+    margin: 0,
     color: "#6b7280",
-    letterSpacing:"0,3px",
+    letterSpacing: "0.3px",
     textTransform: "uppercase" as const,
   };
 
@@ -148,7 +149,7 @@ export const StatsTab = () => {
         />
 
         <StatCard
-          id="Content Types"
+          id="dontent-types"
           icon={<WrenchIcon />}
           value={totalContentTypes}
           title="Content type"
@@ -157,7 +158,7 @@ export const StatsTab = () => {
         />
 
         <StatCard
-          id="Content Types"
+          id="assets"
           icon={<ImageSquareIcon />}
           value={totalAssets}
           title="Assets"
