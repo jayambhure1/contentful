@@ -1,5 +1,6 @@
 import { Card, Tabs } from "@contentful/f36-components";
 import { StatsTab } from "./StatsTab";
+import HelpTab from "./HelpTab";
 
 const TabsSection = () => {
   return (
@@ -62,8 +63,7 @@ const TabsSection = () => {
             }}
           >
             <Tabs.Tab panelId="statistics">Statistics</Tabs.Tab>
-            <Tabs.Tab panelId="second">Second Tab</Tabs.Tab>
-            <Tabs.Tab panelId="third">Third Tab</Tabs.Tab>
+            <Tabs.Tab panelId="help">Help</Tabs.Tab>
           </Tabs.List>
 
           {/* Statistics Tab Content */}
@@ -71,8 +71,10 @@ const TabsSection = () => {
             <StatsTab />
           </Tabs.Panel>
           
-          <Tabs.Panel id="second">Content for the second tab</Tabs.Panel>
-          <Tabs.Panel id="third">Content for the third tab</Tabs.Panel>
+          <Tabs.Panel id="help">
+            <HelpTab/>
+          </Tabs.Panel>
+         
         </Tabs>
       </Card>
     </>

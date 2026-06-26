@@ -13,8 +13,8 @@ const heroSectionStyles = {
   border: "1px solid  #d7e2f3",
   boxShadow: "0px 24px 60px rgba(15, 23, 42, 0.08)",
   background:
-    "radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%)",
-  color: "#fff",
+    "linear-gradient(135deg,#16325c 0%, #1d4a86 48%, #2f6fed 100%)",
+  color: "#ffffff",
 };
 
 const HeroSection = ({ spaceName, sdk }: HeroSectionProps) => {
