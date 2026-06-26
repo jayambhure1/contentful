@@ -1,0 +1,3 @@
+# Ignore module folder
+/cnf-locations/node_modules
+/cnf-locations/.env

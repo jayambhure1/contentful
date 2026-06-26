@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    // Suppress deprecation warnings for Node and ES module options
+    "ignoreDeprecations": "6.0",
+    
+    // Target and Module Options
+    "target": "ES2022",                          // Compile to ES2022 standard
+    "useDefineForClassFields": true,             // Use proper class field definitions for modern targets
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],    // Include DOM APIs and latest JavaScript features
+    "allowJs": false,                            // Only compile TypeScript files (not .js files)
+    
+    // Module Resolution
+    "module": "ESNext",                          // Output ES modules for tree-shaking and bundler optimization
+    "moduleResolution": "Node",                  // Use Node.js module resolution strategy
+    "resolveJsonModule": true,                   // Allow importing JSON files as modules
+    
+    // Interoperability
+    "esModuleInterop": false,                    // Assume ES modules (required for React, Vite setup)
+    "allowSyntheticDefaultImports": true,        // Allow default imports from modules without default exports
+    
+    // Output and Emit
+    "noEmit": true,                              // Don't emit compiled JavaScript (Vite handles compilation)
+    "skipLibCheck": true,                        // Skip type checking of declaration files for faster compilation
+    
+    // Strict Type Checking (enforce best practices)
+    "strict": true,                              // Enable all strict type-checking options
+    "forceConsistentCasingInFileNames": true,    // Prevent inconsistent casing in file imports
+    
+    // Module Isolation
+    "isolatedModules": true,                     // Ensure each file can be transpiled independently
+    
+    // Testing and Type Definitions
+    // Leave types empty to avoid referencing unavailable ambient type packages here.
+    // Install @types/node or vitest types in the project if needed instead of listing them here.
+    "types": [],
+    "jsx": "react-jsx"                           // Use React 17+ JSX transform (automatic JSX import)
+  },
+  "include": ["src", "test"],                    // Include TypeScript files in src/ and test/ directories
+  "exclude": ["node_modules", "dist", "build"]  // Exclude build artifacts and dependencies
+}

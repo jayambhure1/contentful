@@ -1,0 +1,22 @@
+{
+  "name": "contentful-locations",
+  "version": "1.0.0",
+  "description": "A custom home page for Contentful",
+  "locations": [
+    {
+      "location": "app-config"
+    },
+    {
+      "location": "page"
+    },
+    {
+      "location": "entry-field",
+      "fieldTypes": [
+        "Symbol"
+      ]
+    }
+  ],
+  "actions": [],
+  "parameters": [],
+  "functions": []
+}
